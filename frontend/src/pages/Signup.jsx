@@ -24,7 +24,7 @@ export default function Signup({ loginUser }) {
     setLoading(true);
 
     try {
-      const res = await fetch('srv-d8kij2b7uimc73b3roc0/api/auth/signup', {
+      const res = await fetch('https://food-ordering-application-h8fj.onrender.com/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

@@ -56,7 +56,7 @@ export default function App() {
   const changeRole = async (newRole) => {
     if (!user) return;
     try {
-      const res = await fetch('srv-d8kij2b7uimc73b3roc0/api/auth/role', {
+      const res = await fetch('https://food-ordering-application-h8fj.onrender.com/api/auth/role', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

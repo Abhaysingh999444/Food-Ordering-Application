@@ -17,7 +17,7 @@ export default function MyOrders({ user }) {
 
   const fetchOrders = async () => {
     try {
-      const res = await fetch('srv-d8kij2b7uimc73b3roc0/api/orders/my-orders', {
+      const res = await fetch('https://food-ordering-application-h8fj.onrender.com/api/orders/my-orders', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }

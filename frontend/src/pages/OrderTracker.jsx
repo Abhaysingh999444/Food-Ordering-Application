@@ -58,7 +58,7 @@ export default function OrderTracker() {
     fetchOrderDetails();
 
     // 2. Establish Socket.io connection for real-time alerts
-    const socket = io('srv-d8kij2b7uimc73b3roc0');
+    const socket = io('https://food-ordering-application-h8fj.onrender.com');
     socket.emit('join_order', id);
 
     // Receive order status adjustments
@@ -89,7 +89,7 @@ export default function OrderTracker() {
 
   const fetchOrderDetails = async () => {
     try {
-      const res = await fetch(`srv-d8kij2b7uimc73b3roc0/api/orders/${id}`, {
+      const res = await fetch(`https://food-ordering-application-h8fj.onrender.com/api/orders/${id}`, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       if (!res.ok) throw new Error('Failed to retrieve order');

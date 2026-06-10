@@ -73,7 +73,7 @@ export default function AdminDashboard({ user }) {
 
   const fetchAdminOrders = async () => {
     try {
-      const res = await fetch('srv-d8kij2b7uimc73b3roc0/api/orders/all', {
+      const res = await fetch('https://food-ordering-application-h8fj.onrender.com/api/orders/all', {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       if (!res.ok) throw new Error('Failed to load dashboard orders');
@@ -86,7 +86,7 @@ export default function AdminDashboard({ user }) {
 
   const fetchRestaurants = async () => {
     try {
-      const res = await fetch('srv-d8kij2b7uimc73b3roc0/api/restaurants');
+      const res = await fetch('https://food-ordering-application-h8fj.onrender.com/api/restaurants');
       const data = await res.json();
       setRestaurants(data);
       if (data.length > 0 && !selectedRestaurantId) {
@@ -101,7 +101,7 @@ export default function AdminDashboard({ user }) {
 
   const updateOrderStatus = async (orderId, newStatus) => {
     try {
-      const res = await fetch(`srv-d8kij2b7uimc73b3roc0/api/orders/${orderId}/status`, {
+      const res = await fetch(`https://food-ordering-application-h8fj.onrender.com/api/orders/${orderId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ export default function AdminDashboard({ user }) {
           throw new Error('Please fill out all custom restaurant fields (Name, Cuisine, Address).');
         }
 
-        const restRes = await fetch('srv-d8kij2b7uimc73b3roc0/api/restaurants', {
+        const restRes = await fetch('https://food-ordering-application-h8fj.onrender.com/api/restaurants', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -178,7 +178,7 @@ export default function AdminDashboard({ user }) {
       const finalCategory = foodCat === 'custom' ? (customCategory || 'Custom') : foodCat;
 
       // 2. Add food item to target restaurant
-      const res = await fetch(`srv-d8kij2b7uimc73b3roc0/api/restaurants/${targetRestaurantId}/menu`, {
+      const res = await fetch(`https://food-ordering-application-h8fj.onrender.com/api/restaurants/${targetRestaurantId}/menu`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
