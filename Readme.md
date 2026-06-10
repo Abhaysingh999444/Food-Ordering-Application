@@ -2,6 +2,10 @@
 
 A full-stack Food Delivery Application built using the MERN Stack (MongoDB, Express.js, React.js, and Node.js). This platform allows users to browse restaurants, explore menus, place orders, make secure online payments, and track deliveries in real-time. The application also includes a powerful admin dashboard for managing restaurants, menu items, users, and orders efficiently.
 
+## 🌐 Live Demo
+
+🔗 **Live Application:** https://food-ordering-application-five.vercel.app/
+
 ## 🚀 Features
 
 ### 👤 User Features
@@ -80,9 +84,5 @@ A full-stack Food Delivery Application built using the MERN Stack (MongoDB, Expr
 * Scalable Backend Architecture
 * Admin Control Panel
 * Production-Ready Project Structure
-
-## 📌 Project Goal
-
-The goal of this project is to provide a seamless and efficient food ordering experience by combining modern web technologies, real-time communication, secure payments, and location-based services into a single platform.
 
 ⭐ If you like this project, don't forget to give it a star!
