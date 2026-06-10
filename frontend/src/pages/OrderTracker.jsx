@@ -58,7 +58,7 @@ export default function OrderTracker() {
     fetchOrderDetails();
 
     // 2. Establish Socket.io connection for real-time alerts
-    const socket = io('http://localhost:5000');
+    const socket = io('srv-d8kij2b7uimc73b3roc0');
     socket.emit('join_order', id);
 
     // Receive order status adjustments
@@ -89,7 +89,7 @@ export default function OrderTracker() {
 
   const fetchOrderDetails = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/${id}`, {
+      const res = await fetch(`srv-d8kij2b7uimc73b3roc0/api/orders/${id}`, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       if (!res.ok) throw new Error('Failed to retrieve order');

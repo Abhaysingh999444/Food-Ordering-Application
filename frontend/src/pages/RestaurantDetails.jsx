@@ -14,7 +14,7 @@ export default function RestaurantDetails({ cart, addToCart, removeFromCart, cle
 
   const fetchRestaurantDetails = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/restaurants/${id}`);
+      const res = await fetch(`srv-d8kij2b7uimc73b3roc0/api/restaurants/${id}`);
       if (!res.ok) throw new Error('Failed to load restaurant details');
       const data = await res.json();
       setRestaurant(data);

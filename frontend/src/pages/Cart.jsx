@@ -97,7 +97,7 @@ export default function Cart({ user, cart, clearCart }) {
       // Simulate premium payment processing delay
       await new Promise(resolve => setTimeout(resolve, 2000));
 
-      const res = await fetch('http://localhost:5000/api/orders', {
+      const res = await fetch('srv-d8kij2b7uimc73b3roc0/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -38,7 +38,7 @@ export default function Home() {
   const fetchRestaurants = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/api/restaurants');
+      const res = await fetch('srv-d8kij2b7uimc73b3roc0/api/restaurants');
       const data = await res.json();
       setRestaurants(data);
     } catch (err) {
